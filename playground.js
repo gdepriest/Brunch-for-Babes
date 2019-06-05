@@ -69,7 +69,7 @@ $.ajax({
 });
 
 $.ajax({
-    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7392,-104.9903&radius=5&types=food&name=harbour&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8",
+    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8",
     method: "GET"
 }).then(function(response) {
     console.log(response);
