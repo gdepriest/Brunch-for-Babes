@@ -1,6 +1,7 @@
 body {
     background-image: url(images/ShiplapBackgrounf.png);
-}
+    cursor: url("images/champagne-pointer.png"), default !important;
+} 
 
 .jumbotron {
     background-image: url(images/Header.png);
@@ -11,7 +12,7 @@ body {
 }
 
 h1 {
-    font-family: 'Life Savers', cursive;
+    font-family: 'Yeseva One', cursive;
     text-align: center;
     position: relative;
     font-size: 500%;
@@ -26,3 +27,8 @@ form {
     background-color: whitesmoke;
     border-radius: 15px;
 }
+
+#button:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+}
+
