@@ -1,5 +1,10 @@
+// var audio = 
+
 $("#submit").on("click", function(event) {
     event.preventDefault();
+
+    // audio.play();
+    // console.log("Audio should play")
 
     var zipCode = $("#zip").val().trim();
     var pricePoint = $("#pricePoint").val();
@@ -30,8 +35,8 @@ $("#submit").on("click", function(event) {
             var restaurants = response.restaurants;
             // console.log(restaurants)
 
-            const filteredRatings = restaurants.filter(restaurant => restaurant.restaurant.user_rating.aggregate_rating > 4.2);
-            console.log("filtered-ratings" , filteredRatings);
+            // const filteredRatings = restaurants.filter(restaurant => restaurant.restaurant.user_rating.aggregate_rating > 4.2);
+            // console.log("filtered-ratings" , filteredRatings);
 
             const filteredPriceLow = restaurants.filter(restaurant => restaurant.restaurant.price_range === 1);
             console.log("price-range 1: " , filteredPriceLow)
@@ -41,9 +46,21 @@ $("#submit").on("click", function(event) {
 
             const filteredPriceHigh = restaurants.filter(restaurant => restaurant.restaurant.price_range === 4 || restaurant.restaurant.price_range === 5);
             console.log("price-range 3: " , filteredPriceHigh);
-
+            
             //set variable for name for search purposes in google - do I need a for loop?
+            for (i=4; i<restaurants.length; i++) {
 
+                var restName = restaurants[i].restaurant.name;
+                var restLat = restaurants[i].restaurant.location.latitude;
+                var restLng = restaurants[i].restaurant.location.longitude;
+                console.log(restName , restLat , restLng);
+
+                function initMap() {
+                    
+                }
+
+                
+            }
             //ajax call to google for map!
         
         
