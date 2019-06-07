@@ -1,10 +1,10 @@
-// var audio = 
+var clickSound = document.createElement("audio");
+clickSound.setAttribute("src", "audio/shooting-star.mp3");
 
 $("#submit").on("click", function(event) {
     event.preventDefault();
 
-    // audio.play();
-    // console.log("Audio should play")
+    clickSound.play();
 
     var zipCode = $("#zip").val().trim();
     var pricePoint = $("#pricePoint").val();
@@ -46,7 +46,7 @@ $("#submit").on("click", function(event) {
             console.log("price-range 3: " , filteredPriceHigh);
             
             //set variable for name for search purposes in google - do I need a for loop?
-            for (i=4; i<restaurants.length; i++) {
+            for (i=0; i<restaurants.length; i++) {
 
 
                 var restName = restaurants[i].restaurant.name;
