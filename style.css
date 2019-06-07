@@ -1,11 +1,7 @@
 body {
     background-image: url(images/ShiplapBackgrounf.png);
-<<<<<<< HEAD
-}
-=======
     cursor: url("images/champagne-pointer.png"), default !important;
 } 
->>>>>>> 1d3e12659985c689a27c7ab897007824efcacc66
 
 .jumbotron {
     background-image: url(images/Header.png);
@@ -16,46 +12,32 @@ body {
 }
 
 h1 {
-<<<<<<< HEAD
-    font-family: 'Life Savers', cursive;
-    text-align: center;
-    position: relative;
-    font-size: 500%;
-    bottom: -100%;
-    margin-bottom: 50px;
-=======
-    color: black;
+    color: palevioletred;
     font-family: 'Rochester', cursive;
     text-align: center;
     position: relative;
     font-size: 525%;
     bottom: -100%;
     margin-bottom: 50px;
-    
->>>>>>> 1d3e12659985c689a27c7ab897007824efcacc66
 }
 
 form {
     margin-top: 100px;
-<<<<<<< HEAD
     width: 75%;
-=======
-    width: 70%;
->>>>>>> 1d3e12659985c689a27c7ab897007824efcacc66
     margin: 0 auto;
     background-color: whitesmoke;
     border-radius: 15px;
 }
 
-<<<<<<< HEAD
+
 .card {
     width: 80%;
     margin: 0 auto;
 }
-=======
+
 #submit:hover {
     cursor: url("images/mouse-glass.png"), default !important;
-    background-color: pink;
+    background-color: palevioletred;
     color: black
 }
 
@@ -66,14 +48,17 @@ form {
     font-family: 'Tajawal', sans-serif;
     padding-bottom: 1px;
     padding-top: 8px;
+    border: white;
+    margin-bottom: 5px;
+    
 }
 
 .heading {
     font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    font-weight: 5px;
 }
 
 .form-group {
     margin-top: 10px;
 }
-
->>>>>>> 1d3e12659985c689a27c7ab897007824efcacc66
