@@ -96,6 +96,9 @@ $.ajax({
 
 // $(".modal").modal("hide");  
 // $(".modal-body").html("<h3>You bagged a win!</h3>")
+
+// $(".modal-body").html("<h3>You bagged a win!</h3>")
+
 // $(".modal-body").html("<h3>You bagged a win!</h3>");
 
 // $(".modal").modal("show");
@@ -107,4 +110,5 @@ $.ajax({
 }).then(function(response) {
     console.log(response);
 });
+
 

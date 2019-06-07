@@ -28,9 +28,7 @@ $("#submit").on("click", function(event) {
             url: "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=brunch&lat=" + lat + "&lon=" + lng + "&apikey=527733933cfc51b0f78491172626a1a3&count=all",
             method: "POST",
         }).then(function(response) {
-            
-            // console.log(response);    
-            // console.log(response.restaurants);
+        
         
             var restaurants = response.restaurants;
             // console.log(restaurants)
@@ -50,6 +48,7 @@ $("#submit").on("click", function(event) {
             //set variable for name for search purposes in google - do I need a for loop?
             for (i=4; i<restaurants.length; i++) {
 
+
                 var restName = restaurants[i].restaurant.name;
                 var restLat = restaurants[i].restaurant.location.latitude;
                 var restLng = restaurants[i].restaurant.location.longitude;
@@ -61,11 +60,33 @@ $("#submit").on("click", function(event) {
 
                 
             }
+
             //ajax call to google for map!
         
         
             // for (var i=0; i<restaurants.length; i++) {
-                // var ratingsArray = [];
+                
+            //     function initMap() {
+
+            //         // var restName= restaurants[i].restaurant.name;
+            //         var restLat= restaurants[i].restaurant.location.latitude;
+            //         var restLng = restaurants[i].restaurant.location.longitude;
+
+            //         var myLatLng = restLat + restLng
+
+            //         var map = new google.maps.Map(document.getElementById('map'), {
+            //           zoom: 4,
+            //           center: myLatLng
+            //         });
+            
+            //         var marker = new google.maps.Marker({
+            //           position: myLatLng,
+            //           map: map,
+            //           title: 'Hello World!'
+            //         });
+            
+
+
                 
                 
                 // ratingsArray.push(restaurants[i].restaurant.user_rating.aggregate_rating);
@@ -80,7 +101,8 @@ $("#submit").on("click", function(event) {
         
                 // var restName = $("<h4>").text(restaurants[i].restaurant.name);
                 // var rating = $("<p>").text("Rating: " + restaurants[i].restaurant.user_rating.aggregate_rating);
-                // var image = $("<img>").attr('src', restaurants[i].restaurant.thumb);
+                // var image = $("<img>").attr('r1Img', restaurants[i].restaurant.thumb);
+                // // r1Img 
         
                 // restDiv.append(restName);
                 // restDiv.append(rating);

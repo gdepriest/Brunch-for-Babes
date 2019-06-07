@@ -35,6 +35,7 @@ form {
     margin: 0 auto;
 }
 
+
 #submit:hover {
     cursor: url("images/mouse-glass.png"), default !important;
     background-color: palevioletred;
