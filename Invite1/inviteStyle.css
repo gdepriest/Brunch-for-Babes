@@ -1,0 +1,204 @@
+/* Floral */
+#mycanvas {
+    color: white;
+}
+
+#floralInvite {
+    width: 600px;
+    height: 600px;
+    background-image: url(floralInvite.jpg);
+    background-size: contain;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h5,
+p {
+    max-width: 400px;
+    align-items: center;
+}
+
+.card-img-overlay {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#floralHost {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#floralWhen {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#floralWhere {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#floralMessage {
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Invite Form */
+#inviteForm {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* Foodie */
+#foodieHost {
+    position: absolute;
+    width: 100%;
+    top: 78%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#foodieWhen {
+    position: absolute;
+    width: 100%;
+    top: 81%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10pt;
+}
+
+#foodieWhere {
+    position: absolute;
+    width: 100%;
+    top: 84%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10pt;
+    line-height: 11pt;
+}
+
+#foodieMessage {
+    position: absolute;
+    width: 100%;
+    top: 92%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10pt;
+    line-height: 11pt;
+}
+
+/* Modern */
+#modernHost {
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#modernWhen {
+    position: absolute;
+    width: 100%;
+    top: 47%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#modernWhere {
+    position: absolute;
+    width: 100%;
+    top: 52%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12pt;
+    line-height: 13pt;
+}
+
+#modernMessage {
+    position: absolute;
+    width: 100%;
+    top: 62%;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Bloody */
+#bloodyHost {
+    position: absolute;
+    width: 100%;
+    top: 31%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#bloodyWhen {
+    position: absolute;
+    width: 100%;
+    top: 56%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#bloodyWhere {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12pt;
+    line-height: 13pt;
+}
+
+#bloodyMessage {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Bubbly */
+#bubblyHost {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#bubblyWhen {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#bubblyWhere {
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12pt;
+    line-height: 13pt;
+}
+
+#bubblyMessage {
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
