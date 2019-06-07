@@ -97,3 +97,11 @@ $.ajax({
 // $(".modal").modal("hide");  
 // $(".modal-body").html("<h3>You bagged a win!</h3>");
 // $(".modal").modal("show");
+
+$.ajax({
+    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/findplacefromtext/json?input="
+     + restName + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&inputtype=textquery",
+    method: "GET"
+}).then(function(response) {
+    console.log(response);
+});

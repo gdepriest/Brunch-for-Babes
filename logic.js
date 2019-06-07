@@ -1,8 +1,10 @@
+// var audio = 
+
 $("#submit").on("click", function(event) {
     event.preventDefault();
 
-    audio.play();
-    console.log("Audio should play")
+    // audio.play();
+    // console.log("Audio should play")
 
     var zipCode = $("#zip").val().trim();
     var pricePoint = $("#pricePoint").val();
@@ -33,8 +35,8 @@ $("#submit").on("click", function(event) {
             var restaurants = response.restaurants;
             // console.log(restaurants)
 
-            const filteredRatings = restaurants.filter(restaurant => restaurant.restaurant.user_rating.aggregate_rating > 4.2);
-            console.log("filtered-ratings" , filteredRatings);
+            // const filteredRatings = restaurants.filter(restaurant => restaurant.restaurant.user_rating.aggregate_rating > 4.2);
+            // console.log("filtered-ratings" , filteredRatings);
 
             const filteredPriceLow = restaurants.filter(restaurant => restaurant.restaurant.price_range === 1);
             console.log("price-range 1: " , filteredPriceLow)
@@ -49,14 +51,14 @@ $("#submit").on("click", function(event) {
             for (i=4; i<restaurants.length; i++) {
 
                 var restName = restaurants[i].restaurant.name;
-                console.log(restName);
+                var restLat = restaurants[i].restaurant.location.latitude;
+                var restLng = restaurants[i].restaurant.location.longitude;
+                console.log(restName , restLat , restLng);
 
-                // $.ajax({
-                //     url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8",
-                //     method: "GET"
-                // }).then(function(response) {
-                //     console.log(response);
-                // });
+                function initMap() {
+                    
+                }
+
                 
             }
             //ajax call to google for map!
