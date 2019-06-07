@@ -12,12 +12,14 @@ body {
 }
 
 h1 {
-    font-family: 'Yeseva One', cursive;
+    color: black;
+    font-family: 'Rochester', cursive;
     text-align: center;
     position: relative;
-    font-size: 500%;
+    font-size: 525%;
     bottom: -100%;
     margin-bottom: 50px;
+    
 }
 
 form {
@@ -28,7 +30,26 @@ form {
     border-radius: 15px;
 }
 
-#button:hover {
+#submit:hover {
     cursor: url("images/mouse-glass.png"), default !important;
+    background-color: pink;
+    color: black
+}
+
+.btn-primary {
+    color: black;
+    background-color: lightpink;
+    align-self: center;
+    font-family: 'Tajawal', sans-serif;
+    padding-bottom: 1px;
+    padding-top: 8px;
+}
+
+.heading {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.form-group {
+    margin-top: 10px;
 }
 

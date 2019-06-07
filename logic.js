@@ -1,11 +1,11 @@
-$(document).ready(function () {
-    var audio = new Audio ("audio/shooting-star.mp3");
+// $(document).ready(function () {
+//     var audio = new Audio ("audio/shooting-star.mp3");
 
-    $("#button").on("click", function() {
-        event.preventDefault();
-        audio.play();
-        console.log("Audio should play");
-    })
+//     $("#button").on("click", function() {
+//         event.preventDefault();
+//         audio.play();
+//         console.log("Audio should play");
+//     })
 const firebaseConfig = {
     apiKey: "AIzaSyDYD0jQpnJMUGnRegSxbWmtPwnmVxB0AK8",
     authDomain: "bootcampproject-acf6e.firebaseapp.com",
