@@ -1,4 +1,11 @@
-// 
+$(document).ready(function () {
+    var audio = new Audio ("audio/shooting-star.mp3");
+
+    $("#button").on("click", function() {
+        event.preventDefault();
+        audio.play();
+        console.log("Audio should play");
+    })
 
 $.ajax({
     url: "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=brunch&lat=39.7392&lon=-104.9903&apikey=527733933cfc51b0f78491172626a1a3&count=all",
@@ -88,5 +95,5 @@ $.ajax({
 //   Zomato API 527733933cfc51b0f78491172626a1a3
 
 // $(".modal").modal("hide");  
-// $(".modal-body").html("<h3>You bagged a win!</h3>")
+// $(".modal-body").html("<h3>You bagged a win!</h3>");
 // $(".modal").modal("show");
