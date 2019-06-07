@@ -1,7 +1,10 @@
 body {
     background-image: url(images/ShiplapBackgrounf.png);
-    cursor: url("images/champagne-pointer.png"), default !important;
-} 
+  cursor: url("images/champagne-pointer.png"), default !important;
+}
+
+    
+
 
 .jumbotron {
     background-image: url(images/Header.png);
@@ -23,10 +26,16 @@ h1 {
 
 form {
     margin-top: 100px;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     background-color: whitesmoke;
     border-radius: 15px;
+}
+
+
+.card {
+    width: 80%;
+    margin: 0 auto;
 }
 
 #submit:hover {

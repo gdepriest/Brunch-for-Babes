@@ -95,5 +95,6 @@ $.ajax({
 //   Zomato API 527733933cfc51b0f78491172626a1a3
 
 // $(".modal").modal("hide");  
+// $(".modal-body").html("<h3>You bagged a win!</h3>")
 // $(".modal-body").html("<h3>You bagged a win!</h3>");
-// $(".modal").modal("show");
+
