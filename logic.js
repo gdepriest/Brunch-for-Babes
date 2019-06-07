@@ -1,6 +1,9 @@
 $("#submit").on("click", function(event) {
     event.preventDefault();
 
+    audio.play();
+    console.log("Audio should play")
+
     var zipCode = $("#zip").val().trim();
     var pricePoint = $("#pricePoint").val();
 
@@ -41,9 +44,20 @@ $("#submit").on("click", function(event) {
 
             const filteredPriceHigh = restaurants.filter(restaurant => restaurant.restaurant.price_range === 4 || restaurant.restaurant.price_range === 5);
             console.log("price-range 3: " , filteredPriceHigh);
-
+            
             //set variable for name for search purposes in google - do I need a for loop?
+            for (i=4; i<restaurants.length; i++) {
 
+                var restName = restaurants[i].restaurant.name
+
+                $.ajax({
+                    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8",
+                    method: "GET"
+                }).then(function(response) {
+                    console.log(response);
+                });
+                
+            }
             //ajax call to google for map!
         
         
