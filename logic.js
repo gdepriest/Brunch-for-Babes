@@ -48,14 +48,15 @@ $("#submit").on("click", function(event) {
             //set variable for name for search purposes in google - do I need a for loop?
             for (i=4; i<restaurants.length; i++) {
 
-                var restName = restaurants[i].restaurant.name
+                var restName = restaurants[i].restaurant.name;
+                console.log(restName);
 
-                $.ajax({
-                    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8",
-                    method: "GET"
-                }).then(function(response) {
-                    console.log(response);
-                });
+                // $.ajax({
+                //     url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=" + zipCode + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8",
+                //     method: "GET"
+                // }).then(function(response) {
+                //     console.log(response);
+                // });
                 
             }
             //ajax call to google for map!
