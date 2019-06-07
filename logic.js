@@ -1,8 +1,14 @@
+
+
 var lat = '';
 var lng = '';
 
+
 $("#submit").on("click", function(event) {
     event.preventDefault();
+
+    
+
 
     var zipCode = $("#zip").val().trim();
 
@@ -15,6 +21,8 @@ $("#submit").on("click", function(event) {
         //ajax call to the zomato api, plugging in values fo lat and long
         //
     });
+
+
 
 })
 
