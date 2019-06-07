@@ -1,10 +1,7 @@
 body {
     background-image: url(images/ShiplapBackgrounf.png);
-  cursor: url("images/champagne-pointer.png"), default !important;
-}
-
-    
-
+    cursor: url("images/champagne-pointer.png"), default !important;
+} 
 
 .jumbotron {
     background-image: url(images/Header.png);
