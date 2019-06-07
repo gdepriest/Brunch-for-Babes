@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="shortcut icon" href="assets/images/train-icon.png"> -->
-
+    <title>Brunch for Babes</title>
     <!-- CSS Reset -->
     <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <!-- jQuery -->
     <!-- Bootstrap -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"
-    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -21,93 +21,346 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Life+Savers&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
 
-    <title>Babes in BrunchLand</title>
 
 </head>
 
 <body>
 
-    <header>
-        <div class="jumbotron jumbotron-fluid" id="brunch-header">
-            <!-- <img src="images/Header.png" class="img-fluid" width="100%"> -->
-            <h1><strong>Babes in Brunchland</strong></h1>
-        </div>
-    </header>
 
-    </div class="container" id="main">
-    <div class="row">
-        <div class="col-lg-12">
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1" class="heading">Zip Code</label>
-                    <input type="number" class="form-control" id="zip" placeholder="80109">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1" class="heading">Price Point</label>
-                    <select class="form-control" id="pricePoint">
-                        <option>$</option>
-                        <option>$$</option>
-                        <option>$$$</option>
-                    </select>
-                </div>
-                <!-- <div class="form-group">
-                            <label for="exampleFormControlSelect2">What's Most Important To You?</label>
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
-                                <option>Dog Friendly</option>
-                                <option>Patio Seating</option>
-                                <option>Bottomless Mimosas</option>
 
-                            </select>
-                        </div> -->
-                        <div>
-                <button type="submit" id="submit" class="btn btn-primary">Find Me Brekkie!</button>
+    <title>Babes in BrunchLand</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="jumbotron jumbotron-fluid" id="brunch-header">
+                <!-- <img src="images/Header.png" class="img-fluid" width="100%"> -->
+                <h1><strong>BABES IN BRUNCHLAND</strong></h1>
             </div>
-            </form>
-        </div>
-    </div>
+        </header>
 
-    </div>
+        </div class="container" id="mainContent">
+        <!-- Modal with Large Results -->
+        
 
-    <div id="contentHere" class="text-center"></div>
-
-
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal" tabindex="-1" role="dialog" id="resultsModal">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Get That Brunch</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container">
+
+                          <!-- Restaurant 1 Large -->
+                          <div class="card mb-3 center" id="r1CardLarge">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4" id="r1Img">
+                                    </div>
+                                    <div class="col-md-8 text-center">
+                                        <div class="card-body">
+                                            <br>
+                                            <h2 class="card-title" id="r1Name">Restaurant 1 Name</h2>
+                                            <h4 id="r1Rating">Rating</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                        <div class="col-md-7 text-center">
+                                            <div class="card-body">
+                                                <br>
+                                                <h4 id="r1Street">1234 Street Name</h4>
+                                                <h4 id="r1City">City, St, Zipcode</h4>
+                                                <br>
+                                                <br>
+                                                <h4 id="r1Phone">(123) 456-7891</h4><br>
+                                                <a class="btn btn-primary" href="./Invite1/invite.html" target="_blank" role="button" id="r1InviteButton">Make An Invite</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5" id="r1Map">
+                                            </div>
+                                    </div>
+                            </div>
+                          <!-- Restaurant 2 Large -->
+                          <div class="card mb-3 center" id="r2CardLarge">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4" id="r2Img">
+                                    </div>
+                                    <div class="col-md-8 text-center">
+                                        <div class="card-body">
+                                            <br>
+                                            <h2 class="card-title" id="r2Name">Restaurant 2 Name</h2>
+                                            <h4 id="r2Rating">Rating</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                        <div class="col-md-7 text-center">
+                                            <div class="card-body">
+                                                <br>
+                                                <h4 id="r2Street">1234 Street Name</h4>
+                                                <h4 id="r2City">City, St, Zipcode</h4>
+                                                <br>
+                                                <br>
+                                                <h4 id="r2Phone">(123) 456-7891</h4><br>
+                                                <a class="btn btn-primary" role="button" id="r2InviteButton" href="./Invite1/invite.html" target="_blank">Make An Invite</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5" id="r2Map">
+                                            </div>
+                                    </div>
+                            </div>
+                          <!-- Restaurant 3 Large -->
+                          <div class="card mb-3 center" id="r3CardLarge">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4" id="r3Img">
+                                    </div>
+                                    <div class="col-md-8 text-center">
+                                        <div class="card-body">
+                                            <br>
+                                            <h2 class="card-title" id="r3Name">Restaurant 3 Name</h2>
+                                            <h4 id="r3Rating">Rating</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                        <div class="col-md-7 text-center">
+                                            <div class="card-body">
+                                                <br>
+                                                <h4 id="r3Street">1234 Street Name</h4>
+                                                <h4 id="r3City">City, St, Zipcode</h4>
+                                                <br>
+                                                <br>
+                                                <h4 id="r3Phone">(123) 456-7891</h4><br>
+                                                <a class="btn btn-primary" href="./Invite1/invite.html" target="_blank" role="button" id="r3InviteButton">Make An Invite</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5" id="r3Map">
+                                            </div>
+                                    </div>
+                            </div>
+                          <!-- Restaurant 4 Large -->
+                          <div class="card mb-3 center" id="r4CardLarge">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4" id="r4Img">
+                                    </div>
+                                    <div class="col-md-8 text-center">
+                                        <div class="card-body">
+                                            <br>
+                                            <h2 class="card-title" id="r4Name">Restaurant 4 Name</h2>
+                                            <h4 id="r4Rating">Rating</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                        <div class="col-md-7 text-center">
+                                            <div class="card-body">
+                                                <br>
+                                                <h4 id="r4Street">1234 Street Name</h4>
+                                                <h4 id="r4City">City, St, Zipcode</h4>
+                                                <br>
+                                                <br>
+                                                <h4 id="r4Phone">(123) 456-7891</h4><br>
+                                                <a class="btn btn-primary" href="./Invite1/invite.html" target="_blank" role="button" id="r4InviteButton">Make An Invite</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5" id="r4Map">
+                                            </div>
+                                    </div>
+                            </div>
+
+                          <!-- Restaurant 5 Large -->
+                          <div class="card mb-3 center" id="r5CardLarge">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4" id="r5Img">
+                                    </div>
+                                    <div class="col-md-8 text-center">
+                                        <div class="card-body">
+                                            <br>
+                                            <h2 class="card-title" id="r5Name">Restaurant 5 Name</h2>
+                                            <h4 id="r5Rating">Rating</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                        <div class="col-md-7 text-center">
+                                            <div class="card-body">
+                                                <br>
+                                                <h4 id="r5Street">1234 Street Name</h4>
+                                                <h4 id="r5City">City, St, Zipcode</h4>
+                                                <br>
+                                                <br>
+                                                <h4 id="r5Phone">(123) 456-7891</h4><br>
+                                                <a class="btn btn-primary" href="./Invite1/invite.html" target="_blank" role="button" id="r5InviteButton">Make An Invite</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5" id="r5Map">
+                                            </div>
+                                    </div>
+                            </div>
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
                 </div>
-                <div id="contentHere" class="modal-body"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+
+
+
+        <!-- User Input Form -->
+        <div class="container" id="inputFormWrap">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="firstForm">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Zip Code</label>
+                            <input type="number" class="form-control" id="zip" placeholder="80109">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Price Point</label>
+                            <select class="form-control" id="pricePoint">
+                                <option id="lowPrice">$</option>
+                                <option id="midPrice">$$</option>
+                                <option id="highPrice">$$$</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" id="submit formSubmit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" id="button">Submit</button>
-            </form>
         </div>
-    </div>
 
-<<<<<<< HEAD
+        <!-- Results Small -->
+        <div class="container" id="resultsWrap">
+            <!-- Restaurant 1 Small -->
+            <div class="card mb-3 center" id="r1CardSmall">
+                <div class="row no-gutters">
+                    <div class="col-md-4" id="r1Img">
+                    </div>
+                    <div class="col-md-8 text-center">
+                        <div class="card-body">
+                            <br>
+                            <h2 class="card-title" id="r1Name">Restaurant 1 Name</h2><br>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r1ButtonMore">More Information</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 Small -->
+            <div class="card mb-3 center" id="r2CardSmall">
+                    <div class="row no-gutters">
+                        <div class="col-md-4" id="r2Img">
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <div class="card-body">
+                                <br>
+                                <h2 class="card-title" id="r2Name">Restaurant 2 Name</h2><br>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r2ButtonMore">More Information</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Restaurant 3 Small -->
+            <div class="card mb-3 center" id="r3CardSmall">
+                    <div class="row no-gutters">
+                        <div class="col-md-4" id="r3Img">
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <div class="card-body">
+                                <br>
+                                <h2 class="card-title" id="r3Name">Restaurant 3 Name</h2><br>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r3ButtonMore">More Information</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Restaurant 4 Small -->
+            <div class="card mb-3 center" id="r4CardSmall">
+                    <div class="row no-gutters">
+                        <div class="col-md-4" id="r4Img">
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <div class="card-body">
+                                <br>
+                                <h2 class="card-title" id="r4Name">Restaurant 4 Name</h2><br>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r4ButtonMore">More Information</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Restaurant 5 Small -->
+            <div class="card mb-3 center" id="r5CardSmall">
+                    <div class="row no-gutters">
+                        <div class="col-md-4" id="r5Img">
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <div class="card-body">
+                                <br>
+                                <h2 class="card-title" id="r5Name">Restaurant 5 Name</h2><br>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r5ButtonMore">More Information</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
     <!-- <script src="logic.js"></script> -->
     <script src="playground.js"></script>
-=======
         <script src="logic.js"></script>
         <!-- <script src="playground.js"></script> -->
->>>>>>> master
 
 
 
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+
+
+
+        <!-- Unsure of Use -->
+        <!-- <div id="contentHere" class="text-center"></div> -->
+
+        <!-- Unsure of Modals Use -->
+        <!-- <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div id="contentHere" class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <script src="logic.js"></script>
+        <!-- <script src="playground.js"></script> -->
+
+
+
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
             </script>
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"
@@ -117,9 +370,11 @@
                 integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
             </script>
             -->
-    <!-- <script src="logic.js"></script> -->
+        <!-- <script src="logic.js"></script> -->
+        <script>
 
+        </script>
 
-</body>
+    </body>
 
 </html>
