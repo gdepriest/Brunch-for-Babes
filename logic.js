@@ -47,26 +47,26 @@ $("#submit").on("click", function(event) {
             //ajax call to google for map!
         
         
-            // for (var i=0; i<restaurants.length; i++) {
+            for (var i=0; i<restaurants.length; i++) {
                 
-            //     function initMap() {
+                function initMap() {
 
-            //         // var restName= restaurants[i].restaurant.name;
-            //         var restLat= restaurants[i].restaurant.location.latitude;
-            //         var restLng = restaurants[i].restaurant.location.longitude;
+                    // var restName= restaurants[i].restaurant.name;
+                    var restLat= restaurants[i].restaurant.location.latitude;
+                    var restLng = restaurants[i].restaurant.location.longitude;
 
-            //         var myLatLng = restLat + restLng
+                    var myLatLng = restLat + restLng
 
-            //         var map = new google.maps.Map(document.getElementById('map'), {
-            //           zoom: 4,
-            //           center: myLatLng
-            //         });
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 4,
+                      center: myLatLng
+                    });
             
-            //         var marker = new google.maps.Marker({
-            //           position: myLatLng,
-            //           map: map,
-            //           title: 'Hello World!'
-            //         });
+                    var marker = new google.maps.Marker({
+                      position: myLatLng,
+                      map: map,
+                      title: 'Hello World!'
+                    });
             
 
 
