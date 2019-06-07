@@ -12,10 +12,11 @@ body {
 }
 
 h1 {
-    font-family: 'Life Savers', cursive;
+    color: palevioletred;
+    font-family: 'Rochester', cursive;
     text-align: center;
     position: relative;
-    font-size: 500%;
+    font-size: 525%;
     bottom: -100%;
     margin-bottom: 50px;
 }
@@ -28,13 +29,15 @@ form {
     border-radius: 15px;
 }
 
+
 .card {
     width: 80%;
     margin: 0 auto;
 }
+
 #submit:hover {
     cursor: url("images/mouse-glass.png"), default !important;
-    background-color: pink;
+    background-color: palevioletred;
     color: black
 }
 
@@ -45,10 +48,15 @@ form {
     font-family: 'Tajawal', sans-serif;
     padding-bottom: 1px;
     padding-top: 8px;
+    border: white;
+    margin-bottom: 5px;
+    
 }
 
 .heading {
     font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    font-weight: 5px;
 }
 
 .form-group {
