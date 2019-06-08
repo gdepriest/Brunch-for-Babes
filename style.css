@@ -64,3 +64,6 @@ form {
     margin-top: 10px;
 }
 
+#map {
+    height: 100%;
+}
