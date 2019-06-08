@@ -21,6 +21,19 @@ h1 {
     margin-bottom: 50px;
 }
 
+h2 {
+    color: palevioletred;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    position: relative;
+    font-size: 300%;
+    bottom: -100%;
+    margin-bottom: 50px;
+}
+#firstForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 form {
     margin-top: 100px;
     width: 75%;
@@ -28,7 +41,6 @@ form {
     background-color: whitesmoke;
     border-radius: 15px;
 }
-
 
 .card {
     width: 80%;
@@ -38,28 +50,130 @@ form {
 #submit:hover {
     cursor: url("images/mouse-glass.png"), default !important;
     background-color: palevioletred;
-    color: black
+    color: black;
+}
+
+.bellhop:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+/* #r1ButtonMore:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r2ButtonMore:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r3ButtonMore:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r4ButtonMore:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r5ButtonMore:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r1InviteButton:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r2InviteButton:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r3InviteButton:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r4InviteButton:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
+#r5InviteButton:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+} */
+
+#close:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
 }
 
 .btn-primary {
     color: black;
     background-color: lightpink;
     align-self: center;
-    font-family: 'Tajawal', sans-serif;
-    padding-bottom: 1px;
+    font-family: 'Old Standard TT', serif;
+    padding-bottom: 5px;
     padding-top: 8px;
     border: white;
     margin-bottom: 5px;
-    
+    font-size: 30px;
+}
+
+.close {
+    color: black;
+    background-color: lightpink;
+    align-self: center;
+    font-family: 'Old Standard TT', serif;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    border: white;
+    margin-bottom: 5px;
+    font-size: 30px;
 }
 
 .heading {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Old Standard TT', serif;
     text-align: center;
     font-weight: 5px;
 }
 
 .form-group {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-family: 'Old Standard TT', serif;
+    font-size: 30px;
+}
+
+#map {
+    height: 100%;
+}
+
+#resultsWrap {
+    margin-top: 100px;
+    width: 75%;
+    margin: 0 20px 0 0 auto;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+h4 {
+    font-family: 'Old Standard TT', serif;
 }
 
