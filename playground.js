@@ -105,7 +105,8 @@ $.ajax({
 
 $.ajax({
     url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/findplacefromtext/json?input="
-     + restName + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&inputtype=textquery",
+
+    + restName + "&key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&inputtype=textquery",
     method: "GET"
 }).then(function(response) {
     console.log(response);
