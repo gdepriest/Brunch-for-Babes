@@ -28,7 +28,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Life+Savers&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
@@ -212,7 +213,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
@@ -225,11 +226,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <form id="firstForm">
-                        <div class="form-group">
+                        <div class="form-group text-center">
                             <label for="exampleFormControlInput1">Zip Code</label>
                             <input type="number" class="form-control" id="zip" placeholder="80109">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group text-center">
                             <label for="exampleFormControlSelect1">Price Point</label>
                             <select class="form-control" id="pricePoint">
                                 <option id="lowPrice">$</option>
@@ -237,7 +238,7 @@
                                 <option id="highPrice">$$$</option>
                             </select>
 
-                        </div> -->
+                        </div>
                         <div class="text-center">
                 <button type="submit" id="submit" class="btn btn-primary center-block">Find Me Brekkie!</button>
                 <br>
@@ -255,10 +256,10 @@
                     <div class="col-md-4" id="r1Img">
                     </div>
                     <div class="col-md-8 text-center">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <br>
                             <h2 class="card-title" id="r1Name">Restaurant 1 Name</h2><br>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r1ButtonMore">More Information</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r1ButtonMore">Tell Me More</button>
                         </div>
                     </div>
                 </div>
@@ -273,7 +274,7 @@
                             <div class="card-body">
                                 <br>
                                 <h2 class="card-title" id="r2Name">Restaurant 2 Name</h2><br>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r2ButtonMore">More Information</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r2ButtonMore">Tell Me More</button>
                             </div>
                         </div>
                     </div>
@@ -288,7 +289,7 @@
                             <div class="card-body">
                                 <br>
                                 <h2 class="card-title" id="r3Name">Restaurant 3 Name</h2><br>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r3ButtonMore">More Information</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r3ButtonMore">Tell Me More</button>
                             </div>
                         </div>
                     </div>
@@ -303,7 +304,7 @@
                             <div class="card-body">
                                 <br>
                                 <h2 class="card-title" id="r4Name">Restaurant 4 Name</h2><br>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r4ButtonMore">More Information</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r4ButtonMore">Tell Me More</button>
                             </div>
                         </div>
                     </div>
@@ -318,7 +319,7 @@
                             <div class="card-body">
                                 <br>
                                 <h2 class="card-title" id="r5Name">Restaurant 5 Name</h2><br>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r5ButtonMore">More Information</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" id="r5ButtonMore">Tell Me More</button>
                             </div>
                         </div>
                     </div>
