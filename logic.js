@@ -1,14 +1,14 @@
 var clickSound = document.createElement("audio");
 clickSound.setAttribute("src", "audio/shooting-star.mp3");
-
-function initMap(restLat, restLng, counter) {
+var counter = 1;
+var map;
+function initMap(restLat, restLng, counter ) {
     restLat = parseFloat(restLat);
     restLng = parseFloat(restLng);
     var myLatLng = {lat: restLat, lng: restLng};
-    console.log(typeof restLat , typeof restLng);
 
-    var map = new google.maps.Map(document.getElementById('r' + counter++ + 'Map'), {
-      zoom: 4,
+    map = new google.maps.Map(document.getElementById('r' + counter++ + 'Map'), {
+      zoom: 15,
       center: myLatLng
     });
 
@@ -62,7 +62,6 @@ $("#submit").on("click", function(event) {
 
             const filteredPriceHigh = restaurants.filter(restaurant => restaurant.restaurant.price_range === 4 || restaurant.restaurant.price_range === 5);
             console.log("price-range 3: " , filteredPriceHigh);
-            var counter = 1
             //set variable for name for search purposes in google - do I need a for loop?
             for (i=0; i<restaurants.length; i++) {
 
@@ -71,7 +70,7 @@ $("#submit").on("click", function(event) {
                 var restLat = restaurants[i].restaurant.location.latitude;
                 var restLng = restaurants[i].restaurant.location.longitude;
                 // console.log(restName , restLat , restLng);
-                initMap(restLat, restLng, counter);
+                initMap(restLat, restLng, counter++);
 
                 //How will we place each map in a separate div?
             }
